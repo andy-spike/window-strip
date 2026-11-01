@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "io.github.andy-spike.window-strip",
   "name": "Window Strip",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "author": "Andy Spike",
   "description": "Window tabs for the current workspace, shown under the Omarchy bar.",
   "kinds": ["service"],

@@ -12,8 +12,9 @@ Window tabs for the current workspace, shown under the Omarchy bar.
 - Click a tab to focus its window. Middle-click a tab, or click its ×, to close
   the window. Closing asks the app politely, so unsaved-work prompts still
   appear.
-- The focused tab is solid with full-strength text and a soft shadow. Other
-  tabs stay dimmed and turn firmer on hover.
+- The focused tab is solid with full-strength text, a soft shadow, and a 1.5 px
+  accent outline in Hyprland's active border color. Other tabs stay
+  dimmed and turn firmer on hover.
 - App icons come from each app's desktop entry. Tab colors come from the
   current Omarchy theme, and corners follow Hyprland's window rounding.
 - Scroll over the tabs to reveal more. The focused tab stays in view, and soft

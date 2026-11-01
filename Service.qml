@@ -21,7 +21,9 @@ Item {
   readonly property color tabHoverFill: Util.alpha(Color.bar.background, 0.75)
   readonly property color tabActiveFill: Util.alpha(Color.bar.background, 0.97)
   readonly property color tabRestBorder: Util.alpha(Color.bar.text, 0.08)
-  readonly property color tabActiveBorder: Util.alpha(Color.bar.text, 0.16)
+  // The focused tab's accent outline, a touch lighter than the 2 px window border.
+  readonly property color tabActiveBorder: Color.accent
+  readonly property real tabActiveBorderWidth: 1.5
 
   function closeWindow(address) {
     if (!/^0x[0-9a-f]+$/i.test(address)) return
@@ -296,10 +298,11 @@ Item {
                 anchors { fill: parent; topMargin: panel.tabInsetY; bottomMargin: panel.tabInsetY }
                 radius: panel.tabRadius
                 color: tab.active ? root.tabActiveFill : tab.hovered ? root.tabHoverFill : root.tabRestFill
-                border.width: 1
+                border.width: tab.active ? root.tabActiveBorderWidth : 1
                 border.color: tab.active ? root.tabActiveBorder : root.tabRestBorder
-                // A soft shadow lifts the focused tab off the row. It belongs to
-                // its own tab, so a reorder cannot leave it on another window.
+                // An accent outline and a soft shadow lift the focused tab off
+                // the row. Both belong to this tab, so a reorder cannot leave
+                // them on another window.
                 layer.enabled: tab.active
                 layer.effect: MultiEffect {
                   shadowEnabled: true
