@@ -2,6 +2,12 @@
 
 Window tabs for the current workspace, shown under the Omarchy bar.
 
+It is most useful with Hyprland's scrolling layout. That layout places windows
+in columns that extend past the screen edges, so most of a workspace's windows
+are out of view at any time. The strip lists every window on the current
+workspace, so you can keep track of what is open and jump to any of them with
+one click.
+
 ![Window Strip tabs](preview.png)
 
 ## Features
